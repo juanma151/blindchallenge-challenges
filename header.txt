@@ -1,0 +1,8 @@
+package mychallenges_old;
+
+import blch.framework.annotations.Challenge;
+import blch.framework.external.ChallengeBase;
+
+import static blch.framework.dsl.WireDsl.*;
+
+
