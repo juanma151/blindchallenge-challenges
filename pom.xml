@@ -7,23 +7,25 @@
 
 	<groupId>org.hagane</groupId>
 	<artifactId>blindchallenge-challenges</artifactId>
-	<version>3.0.0</version>
+	<version>7.5.0</version>
 	<packaging>jar</packaging>
 
 	<name>blindchallenge-challenges</name>
 	<description>Blind Challenge Application Challenges suite</description>
 
 	<properties>
-		<java.version>21</java.version>
-		<spring-boot.version>3.5.8</spring-boot.version>
-		<maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
 		<fmt-maven-plugin.version>2.29</fmt-maven-plugin.version>
 		<google-java-format.version>1.33.0</google-java-format.version>
+		<java.version>21</java.version>
+		<lifecycle-mapping.version>1.0.0</lifecycle-mapping.version>
+		<maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+		<spring-boot.version>3.5.8</spring-boot.version>
+
+		<checkstyle.config>${project.basedir}/config/checkstyle/checkstyle.xml</checkstyle.config>
 		<checkstyle.version>10.21.2</checkstyle.version>
 		<maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
-		<lifecycle-mapping.version>1.0.0</lifecycle-mapping.version>
 
-		<blindchallenge-framework.version>4.0.0</blindchallenge-framework.version>
+		<blindchallenge-framework.version>7.5.0</blindchallenge-framework.version>
 
 		<!-- Encoding -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -103,9 +105,7 @@
 				</dependencies>
 
 				<configuration>
-					<configLocation>
-						${project.basedir}/config/checkstyle/checkstyle.xml
-					</configLocation>
+					<configLocation>${checkstyle.config}</configLocation>
 					<consoleOutput>true</consoleOutput>
 					<failsOnError>false</failsOnError>
 					<failOnViolation>false</failOnViolation>
